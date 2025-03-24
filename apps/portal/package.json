@@ -1,5 +1,5 @@
 {
-  "name": "forge-portal",
+  "name": "portal",
   "private": true,
   "type": "module",
   "scripts": {

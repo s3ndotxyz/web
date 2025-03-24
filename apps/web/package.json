@@ -1,5 +1,5 @@
 {
-  "name": "s3n-web",
+  "name": "web",
   "private": true,
   "type": "module",
   "scripts": {
