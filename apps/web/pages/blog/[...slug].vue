@@ -396,6 +396,6 @@ useSeoMeta({
 <style scoped>
 article,
 .meta {
-  @apply max-w-3xl !important;
+  @apply max-w-3xl font-Actay !important;
 }
 </style>

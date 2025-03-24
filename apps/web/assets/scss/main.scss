@@ -72,10 +72,10 @@
     --background: 174 97% 5%; /* #001917 */
   }
   * {
-    @apply font-Neue scroll-smooth;
+    @apply scroll-smooth;
   }
   body {
-    @apply bg-[hsl(var(--background))] py-4;
+    @apply bg-[hsl(var(--background))] py-4 font-Neue;
   }
   .btn,
   input {
