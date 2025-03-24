@@ -7,7 +7,7 @@ on:
       - "apps/cloud/**"
 
 jobs:
-  publish_landing:
+  publish_page:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
