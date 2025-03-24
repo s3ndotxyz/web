@@ -92,14 +92,14 @@ onUnmounted(() => {
 
 const items = [
   {
-    name: "Portal",
-    url: "/",
+    name: "Cloud",
+    url: "https://cloud.s3n.xyz",
     // children: [],
     external: false,
   },
   {
     name: "Docs",
-    url: "/",
+    url: "https://docs.s3n.xyz",
     // children: [],
     external: false,
   },
