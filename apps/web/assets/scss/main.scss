@@ -1,0 +1,100 @@
+@use "sass:meta";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@include meta.load-css("blog.scss");
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Light.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Neue";
+  src: url("./fonts/NeueMachina-Ultrabold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Actay";
+  src: url("./fonts/Actay-Regular.otf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Actay";
+  src: url("./fonts/ActayCondensed-Thin.otf");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "Actay";
+  src: url("./fonts/ActayWide-Bold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Actay";
+  src: url("./fonts/Actay-RegularItalic.otf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Actay";
+  src: url("./fonts/ActayCondensed-ThinItalic.otf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Actay";
+  src: url("./fonts/ActayWide-BoldItalic.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Sora";
+  src: url("./fonts/Sora-VariableFont_wght.ttf");
+}
+
+@layer base {
+  :root {
+    --background: 174 97% 5%; /* #001917 */
+  }
+  * {
+    @apply font-Neue scroll-smooth;
+  }
+  body {
+    @apply bg-[hsl(var(--background))] py-4;
+  }
+  .btn,
+  input {
+    @apply relative px-4 rounded-xl flex justify-center items-center text-[#001917] font-semibold uppercase text-sm text-center;
+    * {
+      @apply text-[#001917] text-sm text-center z-10 relative;
+    }
+  }
+
+  ::-moz-selection,
+  ::selection {
+    @apply text-[#001917] bg-[#F96D4E];
+  }
+
+  .negative {
+    @apply text-[#001917] bg-[#F96D4E];
+  }
+
+  .negative::-moz-selection,
+  .negative::selection {
+    @apply text-[#F96D4E] bg-[#001311];
+  }
+}
