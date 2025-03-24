@@ -10,7 +10,7 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "^3.3.0",
+    "@nuxt/content": "^3.4.0",
     "motion-v": "^0.12.0",
     "nuxt": "^3.16.0",
     "sass-embedded": "^1.83.4",
