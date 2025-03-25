@@ -21,6 +21,7 @@ const isLoading = ref(true);
 const authenticated = ref(false);
 const session = authClient.useSession();
 const emailed = ref(false);
+const error = ref<string | null>(null);
 
 useSeoMeta({
   title: "Sign in",
@@ -63,13 +64,14 @@ const onSubmit = handleSubmit(async (values) => {
 
 const handleOAuthAuthentication = async () => {
   try {
+    error.value = null;
     isLoading.value = true;
     const data = await authClient.signIn.social({
       provider: "github",
     });
-  } catch (error) {
-    console.error("GitHub authentication failed:", error);
-    // Consider showing a user-friendly error message
+  } catch (err: any) {
+    console.error("GitHub authentication failed:", err);
+    error.value = `GitHub authentication failed: ${err.statusText}`;
   } finally {
     isLoading.value = false;
   }
@@ -91,9 +93,9 @@ const handleSubmitEmail = async (email: string) => {
     }
 
     emailed.value = data?.status as boolean;
-  } catch (error) {
-    console.error("Failed to send magic link:", error);
-    // Display error to user
+  } catch (err: any) {
+    console.error("Failed to send magic link:", err);
+    error.value = `Failed to send magic link: ${err.statusText}`;
   } finally {
     isLoading.value = false;
   }
@@ -128,6 +130,12 @@ const goback = () => {
         </CardDescription>
       </CardHeader>
       <CardContent>
+        <div
+          v-if="error"
+          class="mb-4 p-4 text-sm text-destructive bg-destructive/10 rounded-xl"
+        >
+          {{ error }}
+        </div>
         <form @submit="onSubmit" class="grid gap-4">
           <FormField
             v-slot="{ componentField }"

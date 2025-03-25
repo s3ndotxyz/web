@@ -1,31 +1,4 @@
 <script setup lang="ts">
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import {
-  Sidebar,
-  SidebarContent,
-  SidebarFooter,
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarHeader,
-  SidebarInset,
-  SidebarMenu,
-  SidebarMenuButton,
-  SidebarMenuItem,
-  SidebarProvider,
-  SidebarRail,
-} from "@/components/ui/sidebar";
-import { Collapsible } from "@/components/ui/collapsible";
 import {
   BadgeCheck,
   Bell,
@@ -52,7 +25,7 @@ import {
   RiGlobalLine,
 } from "@remixicon/vue";
 
-import { authClient } from "~/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 
 const toggleScheme = () => {
   const colorMode = useColorMode();
@@ -69,20 +42,16 @@ watchEffect(() => {
   !authenticated.value ? goauth() : null;
 });
 
-// This is sample data.
+const organizations = authClient.useListOrganizations().value.data ?? [];
+const hasOrganizations = organizations.length > 0;
+
 const data = {
   user: {
-    name: "Ewan G.Okugbe",
-    email: "lordewan@0xzero.org",
-    avatar: "/avatars/profile.jpg",
+    name: session.value.data?.user.name,
+    email: session.value.data?.user.email,
+    avatar: session.value.data?.user.image,
   },
-  teams: [
-    {
-      name: "ZERO Labs",
-      logo: RiBuilding2Fill,
-      plan: "Free plan",
-    },
-  ],
+  organizations,
   navMain: [
     {
       title: "Services",
@@ -132,14 +101,22 @@ const data = {
   ],
 };
 
-const activeTeam = ref(data.teams[0]);
-
 const isActive = (url: string) => {
   return useRoute().path.startsWith(url);
 };
 
-function setActiveTeam(team: (typeof data.teams)[number]) {
-  activeTeam.value = team;
+const activeOrganization = ref(
+  data.organizations?.[0] ?? {
+    name: "No organization",
+    slug: "Create one!",
+    logo: null,
+  },
+);
+
+function setActiveOrganization(
+  organization: (typeof data.organizations)[number],
+) {
+  activeOrganization.value = organization;
 }
 
 function goto(link: string) {
@@ -198,9 +175,21 @@ function toggleMenu(item: any) {
     userCollapsedMenus[item.title] = false;
   }
 }
+
+const dropdownOpen = ref(false);
+const sheetOpen = ref(false);
+
+const handleAddOrg = (e: Event) => {
+  e.stopPropagation();
+  dropdownOpen.value = false;
+  nextTick(() => {
+    sheetOpen.value = true;
+  });
+};
 </script>
 
 <template>
+  <NewOrganization v-model:open="sheetOpen" />
   <div
     v-if="isLoading || !authenticated"
     class="w-full h-screen flex items-center justify-center px-3"
@@ -220,7 +209,7 @@ function toggleMenu(item: any) {
       <SidebarHeader>
         <SidebarMenu>
           <SidebarMenuItem>
-            <DropdownMenu>
+            <DropdownMenu v-model:open="dropdownOpen">
               <DropdownMenuTrigger as-child>
                 <SidebarMenuButton
                   size="lg"
@@ -229,59 +218,81 @@ function toggleMenu(item: any) {
                   <div
                     class="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground"
                   >
-                    <component :is="activeTeam.logo" class="size-4" />
+                    <component :is="activeOrganization.logo" class="size-4" />
                   </div>
                   <div class="grid flex-1 text-left text-sm leading-tight">
                     <span class="truncate font-semibold">{{
-                      activeTeam.name
+                      activeOrganization.name
                     }}</span>
-                    <span class="truncate text-xs">{{ activeTeam.plan }}</span>
+                    <span class="truncate text-xs">{{
+                      activeOrganization.slug
+                    }}</span>
                   </div>
                   <ChevronsUpDown class="ml-auto" />
                 </SidebarMenuButton>
               </DropdownMenuTrigger>
-              <DropdownMenuContent
-                class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
-                align="start"
-                side="bottom"
-                :side-offset="4"
-              >
-                <DropdownMenuLabel class="text-xs text-muted-foreground">
-                  Teams
-                </DropdownMenuLabel>
-                <DropdownMenuItem
-                  v-for="(team, index) in data.teams"
-                  :key="team.name"
-                  class="gap-2 p-2"
-                  @click="setActiveTeam(team)"
-                  :class="{
-                    'bg-sidebar-accent text-sidebar-accent-foreground':
-                      activeTeam.name === team.name,
-                  }"
+              <template v-if="dropdownOpen">
+                <DropdownMenuContent
+                  class="w-[--radix-dropdown-menu-trigger-width] min-w-56 rounded-lg"
+                  align="start"
+                  side="bottom"
+                  :side-offset="4"
                 >
-                  <div
-                    class="flex size-6 items-center justify-center rounded-sm border"
+                  <DropdownMenuLabel class="text-xs text-muted-foreground">
+                    Organizations
+                  </DropdownMenuLabel>
+                  <template
+                    v-if="data.organizations && data.organizations.length"
                   >
-                    <component :is="team.logo" class="size-4 shrink-0" />
-                  </div>
-                  {{ team.name }}
-                  <DropdownMenuShortcut>⌘{{ index + 1 }}</DropdownMenuShortcut>
-                </DropdownMenuItem>
-                <DropdownMenuSeparator />
-                <DropdownMenuItem class="gap-2 p-2">
-                  <div
-                    class="flex size-6 items-center justify-center rounded-md border bg-background"
+                    <DropdownMenuItem
+                      v-for="(organization, index) in data.organizations"
+                      :key="organization.name"
+                      class="gap-2 p-2"
+                      @click="setActiveOrganization(organization)"
+                      :class="{
+                        'bg-sidebar-accent text-sidebar-accent-foreground':
+                          activeOrganization.name === organization.name,
+                      }"
+                    >
+                      <div
+                        class="flex size-6 items-center justify-center rounded-sm border"
+                      >
+                        <component
+                          :is="organization.logo"
+                          class="size-4 shrink-0"
+                        />
+                      </div>
+                      {{ organization.name }}
+                      <DropdownMenuShortcut
+                        >⌘{{ index + 1 }}</DropdownMenuShortcut
+                      >
+                    </DropdownMenuItem>
+                    <DropdownMenuSeparator />
+                  </template>
+                  <template v-else>
+                    <DropdownMenuItem disabled> Empty.. </DropdownMenuItem>
+                  </template>
+                  <DropdownMenuItem
+                    class="gap-2 p-2"
+                    @click="handleAddOrg"
+                    @select.prevent
                   >
-                    <Plus class="size-4" />
-                  </div>
-                  <div class="font-medium text-muted-foreground">Add team</div>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
+                    <div
+                      class="flex size-6 items-center justify-center rounded-md border bg-background"
+                    >
+                      <Plus class="size-4" />
+                    </div>
+                    <div class="font-medium text-muted-foreground">
+                      Add organization
+                    </div>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </template>
             </DropdownMenu>
           </SidebarMenuItem>
         </SidebarMenu>
       </SidebarHeader>
-      <SidebarContent>
+      <SidebarContent v-if="hasOrganizations">
         <SidebarGroup>
           <SidebarMenu v-for="item in data.navMain" :key="item.title">
             <SidebarMenuItem v-if="!item.items">
@@ -345,6 +356,13 @@ function toggleMenu(item: any) {
           </SidebarMenu>
         </SidebarGroup>
       </SidebarContent>
+      <SidebarContent v-else>
+        <SidebarGroup
+          class="h-full flex items-center justify-center text-sm group-data-[collapsible=icon]:hidden"
+        >
+          No organization, yet.
+        </SidebarGroup>
+      </SidebarContent>
       <SidebarFooter>
         <SidebarGroup class="group-data-[collapsible=icon]:hidden">
           <SidebarGroupLabel>Resources</SidebarGroupLabel>
@@ -373,7 +391,7 @@ function toggleMenu(item: any) {
                 >
                   <Avatar class="h-8 w-8 rounded-lg">
                     <AvatarImage
-                      :src="data.user.avatar"
+                      :src="data.user.avatar as string"
                       :alt="data.user.name"
                     />
                     <AvatarFallback class="rounded-lg"> EG </AvatarFallback>
@@ -399,7 +417,7 @@ function toggleMenu(item: any) {
                   >
                     <Avatar class="h-8 w-8 rounded-lg">
                       <AvatarImage
-                        :src="data.user.avatar"
+                        :src="data.user.avatar as string"
                         :alt="data.user.name"
                       />
                       <AvatarFallback class="rounded-lg"> EG </AvatarFallback>
@@ -417,6 +435,7 @@ function toggleMenu(item: any) {
                 <DropdownMenuSeparator />
                 <DropdownMenuGroup>
                   <DropdownMenuItem
+                    v-if="hasOrganizations"
                     @click="goto('/billing')"
                     :class="{
                       'bg-sidebar-accent text-sidebar-accent-foreground':

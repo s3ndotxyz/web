@@ -1,7 +1,7 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: "TEE Portal",
-  ogTitle: "TEE Portal",
+  title: "TEE Cloud",
+  ogTitle: "TEE Cloud",
   description: "One-click TEE application deployment.",
   ogDescription: "One-click TEE application deployment.",
   ogImage: "/hero.png",

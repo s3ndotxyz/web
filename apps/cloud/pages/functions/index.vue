@@ -10,6 +10,10 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Slash } from "lucide-vue-next";
+import { authClient } from "@/lib/auth-client";
+
+const organizations = authClient.useListOrganizations().value.data ?? [];
+const hasOrganizations = organizations.length > 0;
 
 function goto(link: string) {
   useRouter().push(link);
