@@ -18,7 +18,7 @@ jobs:
           docker login --username hey-ewan --password ${{ secrets.GITHUB_TOKEN }} ghcr.io
           docker build . --tag ghcr.io/s3ndotxyz/web/web:latest
           docker push ghcr.io/s3ndotxyz/web/web:latest
-        working-directory: ./apps/s3n/web
+        working-directory: ./apps/web
 
       - name: Install and configure the Koyeb CLI
         uses: koyeb-community/install-koyeb-cli@v2

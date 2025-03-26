@@ -8,6 +8,14 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { SidebarTrigger } from "@/components/ui/sidebar";
 import { Button } from "@/components/ui/button";
+import { authClient } from "@/lib/auth-client";
+
+const organizations = authClient.useListOrganizations().value.data ?? [];
+const hasOrganizations = organizations.length > 0;
+
+function goto(link: string) {
+  useRouter().push(link);
+}
 </script>
 
 <template>
@@ -28,16 +36,20 @@ import { Button } from "@/components/ui/button";
   </header>
   <main class="flex w-full h-full flex-col justify-center items-center">
     <h1 class="text-2xl font-bold text-center">Welcome to S3N ✦</h1>
-    <p class="my-4 text-center">
-      Get started with the confidential compute cloud.
+    <p class="my-4 text-center italic">
+      Go turbo with the confidential compute cloud 🏁
     </p>
     <div class="flex flex-col items-center md:flex-row gap-3 mt-2">
-      <nuxt-link to="/containers"
-        ><Button>Deploy Application</Button></nuxt-link
+      <Button @click="goto('/containers')" :disabled="!hasOrganizations">
+        Deploy Application
+      </Button>
+      <Button
+        variant="secondary"
+        @click="goto('/storage')"
+        :disabled="!hasOrganizations"
       >
-      <nuxt-link to="/storage"
-        ><Button variant="secondary">Upload file to storage</Button></nuxt-link
-      >
+        Upload file to storage
+      </Button>
     </div>
   </main>
 </template>

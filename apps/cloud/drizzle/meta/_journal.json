@@ -8,6 +8,13 @@
       "when": 1742457241774,
       "tag": "0000_perpetual_thunderbolt",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1742809596551,
+      "tag": "0001_slippery_cerise",
+      "breakpoints": true
     }
   ]
 }
