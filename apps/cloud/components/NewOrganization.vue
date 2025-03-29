@@ -24,7 +24,7 @@ const formSchema = toTypedSchema(
   }),
 );
 
-const { handleSubmit, isFieldDirty, values, setFieldValue } = useForm({
+const { handleSubmit, values, setFieldValue } = useForm({
   validationSchema: formSchema,
   initialValues: {
     name: "",
@@ -122,7 +122,7 @@ const onSubmit = handleSubmit(async (values) => {
       // imageUrl = await uploadImage(values.image);
     }
 
-    const { data, error: apiError } = await authClient.organization.create({
+    const { error: apiError } = await authClient.organization.create({
       name: values.name as string,
       slug: values.slug as string,
       logo: imageUrl || "",

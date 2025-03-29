@@ -36,7 +36,7 @@ function goto(link: string) {
   </header>
   <main class="flex w-full h-full flex-col justify-center items-center">
     <h1 class="text-2xl font-bold text-center">Welcome to S3N ✦</h1>
-    <p class="my-4 text-center italic">
+    <p class="my-4 text-center">
       Go turbo with the confidential compute cloud 🏁
     </p>
     <div class="flex flex-col items-center md:flex-row gap-3 mt-2">
