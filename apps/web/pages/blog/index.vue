@@ -2,7 +2,9 @@
   <div class="w-full py-20">
     <div class="container mx-auto px-5">
       <div class="relative mb-14">
-        <h1 class="text-5xl font-bold uppercase text-[#EE6F53] relative z-10">
+        <h1
+          class="text-5xl font-Neue font-bold uppercase text-[#EE6F53] relative z-10"
+        >
           Blog <span class="negative">Posts</span>
           <span class="inline-block ml-2 transform rotate-12 text-4xl">✦</span>
         </h1>
