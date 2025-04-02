@@ -3,7 +3,12 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: ["@nuxtjs/tailwindcss", "shadcn-nuxt", "@nuxtjs/color-mode"],
+  modules: [
+    "@nuxtjs/tailwindcss",
+    "shadcn-nuxt",
+    "@nuxtjs/color-mode",
+    "@uploadthing/nuxt",
+  ],
   css: ["~/assets/scss/main.scss"],
   shadcn: {
     /**
@@ -15,6 +20,11 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: "./components/ui",
+  },
+  runtimeConfig: {
+    public: {
+      uploadthingAppid: "",
+    },
   },
   colorMode: {
     preference: "system",
@@ -83,10 +93,7 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      titleTemplate: {
-        tagPriority: "critical",
-        textContent: "%s - S3N",
-      },
+      titleTemplate: "%s - S3N",
     },
   },
 });

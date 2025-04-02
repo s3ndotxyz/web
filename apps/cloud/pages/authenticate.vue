@@ -124,7 +124,7 @@ const goback = () => {
   <div v-else class="w-full h-screen flex items-center justify-center px-3">
     <Card class="mx-auto max-w-sm" v-if="!emailed">
       <CardHeader>
-        <CardTitle class="text-2xl text-center"> Welcome ✦ </CardTitle>
+        <CardTitle class="text-2xl text-center"> Get Started // </CardTitle>
         <CardDescription class="text-center">
           One-click TEE application deployment platform.
         </CardDescription>
