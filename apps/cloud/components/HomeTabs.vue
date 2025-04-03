@@ -54,7 +54,7 @@ watch(
           height="2"
           rx="1"
           class="transform origin-center -translate-y-1 transition duration-200 ease-out"
-          :class="{ '!rotate-[45deg]': menuOpen, '!translate-y-0': menuOpen }"
+          :class="{ '!rotate-[315deg]': menuOpen, '!translate-y-0': menuOpen }"
         />
         <rect
           y="11"
@@ -63,7 +63,7 @@ watch(
           rx="1"
           class="transform origin-center translate-y-1 transition duration-200 ease-out"
           :class="{
-            '!-rotate-[45deg]': menuOpen,
+            '!-rotate-[315deg]': menuOpen,
             '!translate-y-0': menuOpen,
           }"
         />

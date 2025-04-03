@@ -14,8 +14,7 @@ const session = authClient.useSession();
 
 watchEffect(() => {
   isLoading.value = session.value.isPending;
-  authenticated.value = !session.value.data?.user;
-  !authenticated.value ? goauth() : null;
+  authenticated.value = !!session.value.data?.user;
 });
 
 const data = {
@@ -32,10 +31,6 @@ const isActive = (url: string) => {
 
 function goto(link: string) {
   useRouter().push(link);
-}
-
-function goauth() {
-  useRouter().push("/authenticate");
 }
 
 const logout = async () => {

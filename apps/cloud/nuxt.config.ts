@@ -21,6 +21,9 @@ export default defineNuxtConfig({
      */
     componentDir: "./components/ui",
   },
+  router: {
+    middleware: ["auth"],
+  },
   runtimeConfig: {
     public: {
       uploadthingAppid: "",

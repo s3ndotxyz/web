@@ -4,8 +4,8 @@ definePageMeta({
 });
 
 useSeoMeta({
-  title: "Billing",
-  ogTitle: "Billing",
+  title: "Account",
+  ogTitle: "Account",
   description: "One-click TEE application deployment.",
   ogDescription: "One-click TEE application deployment.",
   ogImage: "/hero.png",

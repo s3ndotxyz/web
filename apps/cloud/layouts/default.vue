@@ -8,12 +8,7 @@ const session = authClient.useSession();
 watchEffect(() => {
   isLoading.value = session.value.isPending;
   authenticated.value = !!session.value.data?.user;
-  !authenticated.value ? goauth() : null;
 });
-
-function goauth() {
-  useRouter().push("/authenticate");
-}
 </script>
 
 <template>

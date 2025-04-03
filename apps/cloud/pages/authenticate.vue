@@ -41,7 +41,7 @@ definePageMeta({
 watchEffect(() => {
   isLoading.value = session.value.isPending;
   authenticated.value = !!session.value.data?.user;
-  authenticated.value ? gohome() : null;
+  console.log(`${authenticated.value} 2`);
 });
 
 function gohome() {
