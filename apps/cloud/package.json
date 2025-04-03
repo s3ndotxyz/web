@@ -23,7 +23,7 @@
     "drizzle-kit": "^0.30.4",
     "drizzle-orm": "^0.39.3",
     "drizzle-zod": "^0.7.0",
-    "lucide-vue-next": "^0.454.0",
+    "lucide-vue-next": "^0.485.0",
     "nuxt": "^3.16.0",
     "pg": "^8.13.3",
     "postgres": "^3.4.5",
