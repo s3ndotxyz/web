@@ -26,13 +26,13 @@ watchEffect(() => {
       <div class="h-4 w-4 bg-[#729171] rounded-full animate-bounce"></div>
     </div>
   </div>
-  <div class="h-svh w-full" v-else>
-    <div
-      class="flex h-full w-full flex-col text-sidebar-foreground bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow"
-    >
+  <div class="min-h-screen bg-sidebar w-full flex flex-col" v-else>
+    <div class="flex flex-col flex-grow">
       <Header />
-      <slot />
-      <Footer />
+      <main class="flex-grow flex items-center justify-center">
+        <slot />
+      </main>
     </div>
+    <Footer />
   </div>
 </template>

@@ -27,10 +27,8 @@ watchEffect(() => {
       <div class="h-4 w-4 bg-[#729171] rounded-full animate-bounce"></div>
     </div>
   </div>
-  <div class="h-svh w-full" v-else>
-    <div
-      class="flex h-full w-full flex-col text-sidebar-foreground bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:border-sidebar-border group-data-[variant=floating]:shadow"
-    >
+  <div class="min-h-screen bg-sidebar w-full flex flex-col" v-else>
+    <div class="flex flex-col flex-grow h-full">
       <header
         class="flex w-full h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12"
       >
@@ -47,8 +45,10 @@ watchEffect(() => {
           <ProfileDropDown />
         </div>
       </header>
-      <slot />
-      <Footer />
+      <main class="flex-grow flex h-full">
+        <slot />
+      </main>
     </div>
+    <Footer />
   </div>
 </template>
