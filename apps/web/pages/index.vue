@@ -6,13 +6,13 @@
       <h1
         class="text-6xl max-sm:text-5xl font-bold uppercase text-center text-[#EE6F53] font-Neue"
       >
-        Ship TEE apps at the speed of <span class="negative">light</span> <br />
+        Ship TEE apps to the <span class="negative">edge</span> <br />
         //
       </h1>
       <svg
         viewBox="0 0 304 112"
         class="absolute w-1/2 md:w-1/4 bottom-0 right-1 hover:scale-[1.02] hover:cursor-pointer transition duration-500 ease-out"
-        @click="navigateTo('https://cloud.s3n.xyz')"
+        @click="navigateTo('https://cloud.s3n.xyz', { external: true })"
       >
         <title>Track</title>
         <g stroke="none" fill="none" fill-rule="evenodd">
