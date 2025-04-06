@@ -6,7 +6,7 @@
       <h1
         class="text-6xl max-sm:text-5xl font-bold uppercase text-center text-[#EE6F53] font-Neue"
       >
-        Ship TEE apps to the <span class="negative">edge</span> <br />
+        Ship confidential apps to the <span class="negative">edge</span> <br />
         //
       </h1>
       <svg
