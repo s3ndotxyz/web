@@ -4,7 +4,7 @@
   >
     <div class="container h-full flex justify-center items-center">
       <h1
-        class="text-6xl max-sm:text-5xl font-bold uppercase text-center text-[#EE6F53] font-Neue"
+        class="text-6xl max-sm:text-4xl font-bold uppercase text-center text-[#EE6F53] font-Neue"
       >
         Ship confidential apps to the <span class="negative">edge</span> <br />
         //
@@ -13,6 +13,7 @@
         viewBox="0 0 304 112"
         class="absolute w-1/2 md:w-1/4 bottom-0 right-1 hover:scale-[1.02] hover:cursor-pointer transition duration-500 ease-out"
         @click="navigateTo('https://cloud.s3n.xyz', { external: true })"
+        @mouseenter="startTrackAnimation"
       >
         <title>Track</title>
         <g stroke="none" fill="none" fill-rule="evenodd">
@@ -46,14 +47,50 @@ useSeoMeta({
   twitterSite: "@s3ndotxyz",
 });
 
-import { animate, svg } from "animejs";
+import { animate, hover } from "motion-v";
 
 onMounted(() => {
-  animate(svg.createDrawable("#track-animated"), {
-    draw: "0 1",
-    ease: "ease-out",
-    duration: 6000,
-    loop: false,
-  });
+  const path = document.querySelector("#track-animated");
+  if (path) {
+    animate(
+      path,
+      {
+        pathLength: [0, 1],
+        easing: "ease-out",
+      },
+      {
+        duration: 6,
+      },
+    );
+  }
 });
+
+const startTrackAnimation = () => {
+  const path = document.querySelector("#track-animated");
+  if (path) {
+    // If an animation is already running, stop it and start a new one
+    if (currentAnimation) {
+      currentAnimation.cancel();
+    }
+
+    // Reset the path length to 0 and start a new animation
+    path.style.strokeDashoffset = "1";
+    path.style.strokeDasharray = "1";
+    isAnimating = true;
+
+    currentAnimation = animate(
+      path,
+      {
+        pathLength: [0, 1],
+        easing: "ease-out",
+      },
+      {
+        duration: 6,
+        onComplete: () => {
+          isAnimating = false;
+        },
+      },
+    );
+  }
+};
 </script>
