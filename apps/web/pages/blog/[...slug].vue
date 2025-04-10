@@ -42,9 +42,12 @@
           <div v-if="post">
             <!-- Post header -->
             <div class="mb-10">
-              <div v-if="post.tags" class="flex flex-wrap gap-2 mb-4">
+              <div
+                v-if="parsedTags.length > 0"
+                class="flex flex-wrap gap-2 mb-4"
+              >
                 <nuxt-link
-                  v-for="tag in post.tags"
+                  v-for="tag in parsedTags"
                   :key="tag"
                   :to="`/blog/tag/${tag}`"
                   class="px-3 py-1 text-xs rounded-full tag bg-[#EE6F53] text-[#001917] uppercase font-bold hover:bg-[#f95b3e] transition-colors"
@@ -54,7 +57,7 @@
               </div>
 
               <h1
-                class="text-5xl sm:text-6xl font-bold text-[#EE6F53] tracking-tight leading-tight mb-6"
+                class="text-5xl sm:text-6xl font-bold text-[#EE6F53] tracking-tight leading-tight mb-6 font-Neue"
               >
                 {{ post.title }}
               </h1>
@@ -150,7 +153,7 @@
 
           <!-- Recent Posts -->
           <div
-            v-if="allPosts && allPosts.length > 1"
+            v-if="otherPosts.length > 0"
             class="mt-8 p-6 bg-[#00231f] rounded-[1.75rem] shadow-md"
           >
             <h3 class="text-[#EE6F53] font-bold text-lg mb-4 uppercase">
@@ -162,11 +165,14 @@
                 :key="recentPost.path"
                 class="flex gap-3"
               >
-                <nuxt-link :to="recentPost.path" class="flex flex-row group">
+                <nuxt-link
+                  :to="recentPost.path || '#'"
+                  class="flex flex-row group"
+                >
                   <div class="w-16 h-16 shrink-0 overflow-hidden rounded-xl">
                     <img
                       :src="recentPost.image || '/blog-placeholder.png'"
-                      :alt="recentPost.title"
+                      :alt="recentPost.title || 'Blog post'"
                       class="w-full h-full object-cover"
                     />
                   </div>
@@ -175,7 +181,7 @@
                       class="text-white group-hover:text-[#EE6F53] transition-colors"
                     >
                       <h4 class="font-bold text-sm line-clamp-2">
-                        {{ recentPost.title }}
+                        {{ recentPost.title || "Untitled Post" }}
                       </h4>
                     </div>
                     <p
@@ -226,7 +232,25 @@ const { data: allPosts } = await useAsyncData("all-blog-posts", () => {
 // Filter out current post for "other posts" section
 const otherPosts = computed(() => {
   if (!allPosts.value || !post.value) return [];
-  return allPosts.value.filter((p) => p.path !== post.value.path);
+  return allPosts.value.filter((p) => p.path !== post.value?.path);
+});
+
+// Parse tags to ensure they're an array
+const parsedTags = computed(() => {
+  if (!post.value || !post.value.tags) return [];
+
+  // Handle different formats of tags
+  if (Array.isArray(post.value.tags)) {
+    return post.value.tags;
+  } else if (typeof post.value.tags === "string") {
+    // If it's a comma-separated string
+    return post.value?.tags
+      .split(",")
+      .map((tag: string) => tag.trim())
+      .filter((tag: string) => Boolean(tag));
+  }
+
+  return [];
 });
 
 // Handle page not found
@@ -276,99 +300,33 @@ useSeoMeta({
 </script>
 
 <style>
+/* Use the blog.scss styles instead of redefining styles here */
 .prose {
   color: white;
   max-width: 100%;
 }
 
-.prose h1 {
-  color: #ee6f53;
-  font-weight: bold;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  @apply no-underline !important;
-}
-
-.prose h2,
-.prose h3,
-.prose h4,
-.prose h5,
-.prose h6 {
-  color: #ee6f53;
-  font-weight: bold;
-  margin-top: 2.5rem;
-  margin-bottom: 1.5rem;
-  @apply no-underline !important;
-}
-
-.prose h2 {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
-.prose h3 {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
-.prose a {
-  color: #ee6f53;
-  transition: all 0.2s ease;
+/* Fix heading font to match main page */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-Neue !important;
 }
 
 .tag {
   @apply bg-[#EE6F53] text-[#001917] no-underline !important;
 }
 
-.prose a:hover {
-  color: #f95b3e;
-}
-
-.prose p {
-  margin-bottom: 1.5rem;
+.blog-content-wrapper {
+  font-size: 1.125rem;
   line-height: 1.75;
+  @apply font-Actay;
 }
 
-.prose code {
-  background-color: #002b26;
-  color: #ee6f53;
-  padding: 0 0.25rem;
-  padding-top: 0.125rem;
-  padding-bottom: 0.125rem;
-  border-radius: 1.75rem;
-  font-size: 0.875rem;
-}
-
-.prose pre {
-  background-color: #00231f;
-  padding: 1.25rem;
-  border-radius: 1.75rem;
-  margin: 1.5rem 0;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  border: 1px solid #003d34;
-}
-
-.prose pre code {
-  padding: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-  background-color: transparent;
-  font-size: 0.875rem;
-}
-
-.prose blockquote {
-  border-left-width: 4px;
-  border-color: #ee6f53;
-  padding-left: 1rem;
-  font-style: italic;
-  background-color: #00231f;
-  padding: 1rem;
-  border-radius: 0 1.75rem 1.75rem 0;
-  margin: 2rem 0;
-}
-
+/* Image styling */
 .prose img,
 .prose video {
   border-radius: 1.75rem;
@@ -385,11 +343,6 @@ useSeoMeta({
 .prose img:hover,
 .prose video:hover {
   transform: translateY(-2px);
-}
-
-.blog-content-wrapper {
-  font-size: 1.125rem;
-  line-height: 1.75;
 }
 </style>
 

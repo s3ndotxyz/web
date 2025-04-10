@@ -34,7 +34,7 @@
     }
   }
 
-  a {
+  /* a {
     position: relative;
     text-decoration: none;
   }
@@ -52,7 +52,7 @@
 
   a:hover::before {
     width: 100%;
-  }
+  } */
 
   pre {
     @apply bg-[#00231f] p-5 rounded-xl my-6 overflow-x-auto shadow-lg border border-[#003d34];
