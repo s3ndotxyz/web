@@ -1,15 +1,11 @@
-// import { nodePolyfills } from "vite-plugin-node-polyfills";
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: [
-    "@nuxtjs/tailwindcss",
-    "shadcn-nuxt",
-    "@nuxtjs/color-mode",
-    "@uploadthing/nuxt",
-  ],
-  css: ["~/assets/scss/main.scss"],
+  modules: ["shadcn-nuxt", "@nuxtjs/color-mode", "@uploadthing/nuxt"],
+  css: ["~/assets/css/main.css"],
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -43,6 +39,7 @@ export default defineNuxtConfig({
     },
 
     plugins: [
+      tailwindcss(),
       // {
       //   // work around for `exports is not defined` error within the crypto-browserify > randomfill dep
       //   name: "crypto-randomfill-patch",

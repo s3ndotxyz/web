@@ -23,6 +23,7 @@
 </template>
 
 <style scoped>
+@reference "@/assets/css/main.css";
 li a {
   position: relative;
   text-decoration: none;

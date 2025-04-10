@@ -193,13 +193,17 @@ const goback = () => {
 </template>
 
 <style scoped>
+@reference "@/assets/css/main.css";
+
 button {
-  @apply font-semibold capitalize !important;
+  @apply !font-semibold !capitalize;
 }
 </style>
 
 <style>
+@reference "@/assets/css/main.css";
+
 button {
-  @apply rounded-lg !important;
+  @apply !rounded-lg;
 }
 </style>
