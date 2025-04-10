@@ -54,8 +54,8 @@ importers:
         specifier: ^0.7.0
         version: 0.7.0(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.1)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(zod@3.24.2)
       lucide-vue-next:
-        specifier: ^0.485.0
-        version: 0.485.0(vue@3.5.13(typescript@5.8.3))
+        specifier: ^0.487.0
+        version: 0.487.0(vue@3.5.13(typescript@5.8.3))
       motion-v:
         specifier: ^0.12.0
         version: 0.12.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vue@3.5.13(typescript@5.8.3))
@@ -84,14 +84,17 @@ importers:
         specifier: ^1.3.0
         version: 1.3.0
       tailwind-merge:
-        specifier: ^2.6.0
-        version: 2.6.0
+        specifier: ^3.2.0
+        version: 3.2.0
       tailwindcss:
         specifier: 4.1.3
         version: 4.1.3
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@4.1.3)
+      tw-animate-css:
+        specifier: ^1.2.5
+        version: 1.2.5
       uploadthing:
         specifier: ^7.6.0
         version: 7.6.0(h3@1.15.1)(tailwindcss@4.1.3)
@@ -1567,8 +1570,16 @@ packages:
   '@tanstack/virtual-core@3.13.4':
     resolution: {integrity: sha512-fNGO9fjjSLns87tlcto106enQQLycCKR4DPNpgq3djP5IdcPFdPAmaKjsgzIeRhH7hWrELgW12hYnRthS5kLUw==}
 
+  '@tanstack/virtual-core@3.13.6':
+    resolution: {integrity: sha512-cnQUeWnhNP8tJ4WsGcYiX24Gjkc9ALstLbHcBj1t3E7EimN6n6kHH+DPV4PpDnuw00NApQp+ViojMj1GRdwYQg==}
+
   '@tanstack/vue-virtual@3.13.4':
     resolution: {integrity: sha512-1fPrd3hE1SS4R/9JbX1AlzueY4duCK7ixuLcMW5GMnk9N6WbLo9MioNKiv22V+UaXKOLNy8tLdzT8NYerOFTOQ==}
+    peerDependencies:
+      vue: ^2.7.0 || ^3.0.0
+
+  '@tanstack/vue-virtual@3.13.6':
+    resolution: {integrity: sha512-GYdZ3SJBQPzgxhuCE2fvpiH46qzHiVx5XzBSdtESgiqh4poj8UgckjGWYEhxaBbcVt1oLzh1m3Ql4TyH32TOzQ==}
     peerDependencies:
       vue: ^2.7.0 || ^3.0.0
 
@@ -4346,8 +4357,8 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  lucide-vue-next@0.485.0:
-    resolution: {integrity: sha512-m5nPVfADgzzkfnhtHpYJJTvzIi8HYKofX+getKpZq8RGF34o9sh+DbkhP/WsMFpW33dwmjGOfWB/T58IgwSmuQ==}
+  lucide-vue-next@0.487.0:
+    resolution: {integrity: sha512-ilVgu9EHkfId7WSjmoPkzp13cuzpSGO5J16AmltjRHFoj6MlCBGY8BzsBU/ISKVlDheUxM+MsIYjNo/1hSEa6w==}
     peerDependencies:
       vue: '>=3.0.1'
 
@@ -6077,6 +6088,9 @@ packages:
   tailwind-merge@2.6.0:
     resolution: {integrity: sha512-P+Vu1qXfzediirmHOC3xKGAYeZtPcV9g76X+xg2FD4tYgR71ewMA35Y3sCz3zhiN/dwefRpJX0yBcgwi1fXNQA==}
 
+  tailwind-merge@3.2.0:
+    resolution: {integrity: sha512-FQT/OVqCD+7edmmJpsgCsY820RTD5AkBryuG5IUqR5YQZSdj5xlH5nLgH7YPths7WsLPSpSBNneJdM8aS8aeFA==}
+
   tailwindcss-animate@1.0.7:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
@@ -6230,6 +6244,9 @@ packages:
   turbo@2.5.0:
     resolution: {integrity: sha512-PvSRruOsitjy6qdqwIIyolv99+fEn57gP6gn4zhsHTEcCYgXPhv6BAxzAjleS8XKpo+Y582vTTA9nuqYDmbRuA==}
     hasBin: true
+
+  tw-animate-css@1.2.5:
+    resolution: {integrity: sha512-ABzjfgVo+fDbhRREGL4KQZUqqdPgvc5zVrLyeW9/6mVqvaDepXc7EvedA+pYmMnIOsUAQMwcWzNvom26J2qYvQ==}
 
   type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
@@ -8309,9 +8326,16 @@ snapshots:
 
   '@tanstack/virtual-core@3.13.4': {}
 
+  '@tanstack/virtual-core@3.13.6': {}
+
   '@tanstack/vue-virtual@3.13.4(vue@3.5.13(typescript@5.8.3))':
     dependencies:
       '@tanstack/virtual-core': 3.13.4
+      vue: 3.5.13(typescript@5.8.3)
+
+  '@tanstack/vue-virtual@3.13.6(vue@3.5.13(typescript@5.8.3))':
+    dependencies:
+      '@tanstack/virtual-core': 3.13.6
       vue: 3.5.13(typescript@5.8.3)
 
   '@trysound/sax@0.2.0': {}
@@ -11559,7 +11583,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  lucide-vue-next@0.485.0(vue@3.5.13(typescript@5.8.3)):
+  lucide-vue-next@0.487.0(vue@3.5.13(typescript@5.8.3)):
     dependencies:
       vue: 3.5.13(typescript@5.8.3)
 
@@ -13100,7 +13124,7 @@ snapshots:
       '@floating-ui/vue': 1.1.6(vue@3.5.13(typescript@5.8.3))
       '@internationalized/date': 3.7.0
       '@internationalized/number': 3.6.0
-      '@tanstack/vue-virtual': 3.13.4(vue@3.5.13(typescript@5.8.3))
+      '@tanstack/vue-virtual': 3.13.6(vue@3.5.13(typescript@5.8.3))
       '@vueuse/core': 12.8.2(typescript@5.8.3)
       '@vueuse/shared': 12.8.2(typescript@5.8.3)
       aria-hidden: 1.2.4
@@ -13838,6 +13862,8 @@ snapshots:
 
   tailwind-merge@2.6.0: {}
 
+  tailwind-merge@3.2.0: {}
+
   tailwindcss-animate@1.0.7(tailwindcss@4.1.3):
     dependencies:
       tailwindcss: 4.1.3
@@ -14007,6 +14033,8 @@ snapshots:
       turbo-linux-arm64: 2.5.0
       turbo-windows-64: 2.5.0
       turbo-windows-arm64: 2.5.0
+
+  tw-animate-css@1.2.5: {}
 
   type-check@0.4.0:
     dependencies:
