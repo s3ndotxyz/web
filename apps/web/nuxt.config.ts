@@ -1,14 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
-  modules: [
-    "motion-v/nuxt",
-    "@nuxtjs/tailwindcss",
-    "@nuxtjs/color-mode",
-    "@nuxt/content",
-  ],
-  css: ["~/assets/scss/main.scss"],
+  modules: ["motion-v/nuxt", "@nuxtjs/color-mode", "@nuxt/content"],
+  css: ["~/assets/css/main.css"],
   colorMode: {
     preference: "system",
     globalName: "__NUXT_COLOR_MODE__",
@@ -19,10 +16,10 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      titleTemplate: {
-        tagPriority: "critical",
-        textContent: "%s - S3N",
-      },
+      titleTemplate: "%s - S3N",
     },
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });

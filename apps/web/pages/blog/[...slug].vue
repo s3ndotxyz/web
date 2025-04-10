@@ -57,7 +57,7 @@
               </div>
 
               <h1
-                class="text-5xl sm:text-6xl font-bold text-[#EE6F53] tracking-tight leading-tight mb-6 font-Neue"
+                class="text-5xl sm:text-6xl font-bold text-[#EE6F53] tracking-tight leading-tight mb-6 font-[Neue]"
               >
                 {{ post.title }}
               </h1>
@@ -300,6 +300,7 @@ useSeoMeta({
 </script>
 
 <style>
+@import "tailwindcss";
 /* Use the blog.scss styles instead of redefining styles here */
 .prose {
   color: white;
@@ -313,17 +314,17 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-Neue !important;
+  @apply font-[Neue];
 }
 
 .tag {
-  @apply bg-[#EE6F53] text-[#001917] no-underline !important;
+  @apply !bg-[#EE6F53] !text-[#001917] !no-underline;
 }
 
 .blog-content-wrapper {
   font-size: 1.125rem;
   line-height: 1.75;
-  @apply font-Actay;
+  @apply font-[Actay];
 }
 
 /* Image styling */
@@ -344,11 +345,9 @@ h6 {
 .prose video:hover {
   transform: translateY(-2px);
 }
-</style>
 
-<style scoped>
 article,
 .meta {
-  @apply max-w-3xl font-Actay !important;
+  @apply !max-w-3xl !font-[Actay];
 }
 </style>

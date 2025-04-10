@@ -14,14 +14,4 @@ module.exports = {
     "./app.vue",
     "./assets/**/*.scss",
   ],
-
-  theme: {
-    extend: {
-      fontFamily: {
-        Neue: ["Neue"],
-        Sora: ["Sora"],
-        Actay: ["Actay"],
-      },
-    },
-  },
 };

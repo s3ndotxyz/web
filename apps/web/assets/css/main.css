@@ -1,9 +1,5 @@
-@use "sass:meta";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@include meta.load-css("blog.scss");
+@import "tailwindcss";
+@import "./blog.css";
 
 @font-face {
   font-family: "Neue";
@@ -75,7 +71,7 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[hsl(var(--background))] py-4 font-Actay;
+    @apply bg-[hsl(var(--background))] py-4 font-[Actay];
   }
   .btn,
   input {
