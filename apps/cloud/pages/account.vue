@@ -67,9 +67,9 @@ const showDeleteConfirm = ref(false);
 </script>
 
 <template>
-  <main class="w-full h-full">
+  <main class="w-full flex items-center justify-center px-5">
     <div class="container max-w-6xl py-10 h-full">
-      <div class="mb-8">
+      <div class="mb-8 max-md:text-center">
         <h1 class="text-3xl font-bold">Account Settings</h1>
         <p class="text-muted-foreground">
           Manage your account settings and preferences
