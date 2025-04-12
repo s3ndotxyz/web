@@ -82,7 +82,7 @@ watch(
         orientation="vertical"
       >
         <TabsList class="grid w-full grid-cols-1">
-          <TabsLinkTrigger to="/">Containers</TabsLinkTrigger>
+          <TabsLinkTrigger to="/">Machines</TabsLinkTrigger>
           <TabsLinkTrigger to="/functions">Functions</TabsLinkTrigger>
           <TabsLinkTrigger to="/storage">Storage</TabsLinkTrigger>
         </TabsList>
@@ -92,7 +92,7 @@ watch(
 
   <Tabs class="max-md:hidden" v-model="selectedTab">
     <TabsList>
-      <TabsLinkTrigger to="/">Containers</TabsLinkTrigger>
+      <TabsLinkTrigger to="/">Machines</TabsLinkTrigger>
       <TabsLinkTrigger to="/functions">Functions</TabsLinkTrigger>
       <TabsLinkTrigger to="/storage">Storage</TabsLinkTrigger>
     </TabsList>
