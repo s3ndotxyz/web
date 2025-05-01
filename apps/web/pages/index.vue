@@ -6,7 +6,7 @@
       <h1
         class="text-6xl max-sm:text-4xl font-bold uppercase text-center text-[#EE6F53] font-[Neue]"
       >
-        Confidential compute at <span class="negative">full throttle</span>
+        Hardware-secured compute at <span class="negative">scale</span>
         <br />
         //
       </h1>

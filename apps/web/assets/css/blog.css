@@ -110,4 +110,10 @@
       @apply bg-[#001f1c];
     }
   }
+
+  .blog-content-renderer {
+    p {
+      @apply mb-3;
+    }
+  }
 }
