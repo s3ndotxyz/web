@@ -57,7 +57,7 @@
               </div>
 
               <h1
-                class="text-5xl sm:text-6xl font-bold text-[#EE6F53] tracking-tight leading-tight mb-6 font-[Neue]"
+                class="text-5xl sm:text-6xl font-bold text-[#EE6F53] tracking-tight leading-tight mb-6 font-[]"
               >
                 {{ post.title }}
               </h1>
@@ -305,16 +305,6 @@ useSeoMeta({
 .prose {
   color: white;
   max-width: 100%;
-}
-
-/* Fix heading font to match main page */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @apply font-[Neue];
 }
 
 .tag {

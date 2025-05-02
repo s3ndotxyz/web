@@ -1,18 +1,10 @@
 <template>
-  <div
-    class="w-full h-[calc(100%-104px)] absolute flex justify-center items-center"
-  >
-    <div class="container h-full flex justify-center items-center">
-      <h1
-        class="text-6xl max-sm:text-4xl font-bold uppercase text-center text-[#EE6F53] font-[Neue]"
-      >
-        Hardware-secured compute at <span class="negative">scale</span>
-        <br />
-        //
-      </h1>
-    </div>
-  </div>
+  <!-- <div class="flex flex-col h-full snap"> -->
+  <Hero />
+  <!-- <About /> -->
+  <!-- </div> -->
 </template>
+
 <script lang="ts" setup>
 useSeoMeta({
   title: "S3N | TEE as a Service network",
@@ -24,3 +16,13 @@ useSeoMeta({
   twitterSite: "@s3ndotxyz",
 });
 </script>
+
+<style scoped>
+.snap {
+  scroll-snap-type: y mandatory;
+}
+
+.snap > * {
+  scroll-snap-align: center;
+}
+</style>
