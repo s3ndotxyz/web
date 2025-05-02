@@ -23,7 +23,7 @@
     "drizzle-orm": "^0.41.0",
     "drizzle-zod": "^0.7.1",
     "lucide-vue-next": "^0.503.0",
-    "motion-v": "^0.12.0",
+    "motion-v": "^1.0.1",
     "nuxt": "^3.16.2",
     "pg": "^8.14.1",
     "postgres": "^3.4.5",
