@@ -13,7 +13,7 @@
     "@nuxt/content": "^3.5.1",
     "@remixicon/vue": "^4.6.0",
     "@tailwindcss/vite": "^4.1.3",
-    "motion-v": "^0.12.0",
+    "motion-v": "^1.0.1",
     "nuxt": "^3.16.0",
     "tailwind-merge": "^3.2.0",
     "tailwindcss": "^4.1.3",
