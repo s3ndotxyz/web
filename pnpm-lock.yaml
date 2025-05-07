@@ -49,10 +49,10 @@ importers:
         version: 0.31.0
       drizzle-orm:
         specifier: ^0.41.0
-        version: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)
+        version: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)
       drizzle-zod:
         specifier: ^0.7.1
-        version: 0.7.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(zod@3.24.2)
+        version: 0.7.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(zod@3.24.2)
       lucide-vue-next:
         specifier: ^0.503.0
         version: 0.503.0(vue@3.5.13(typescript@5.8.3))
@@ -61,10 +61,10 @@ importers:
         version: 1.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vue@3.5.13(typescript@5.8.3))
       nuxt:
         specifier: ^3.16.2
-        version: 3.16.2(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.1)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.39.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
+        version: 3.16.2(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.1)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.39.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       pg:
-        specifier: ^8.14.1
-        version: 8.14.1
+        specifier: ^8.15.6
+        version: 8.15.6
       postgres:
         specifier: ^3.4.5
         version: 3.4.5
@@ -119,7 +119,7 @@ importers:
     dependencies:
       '@nuxt/content':
         specifier: ^3.5.1
-        version: 3.5.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(magicast@0.3.5)(typescript@5.8.3)
+        version: 3.5.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(magicast@0.3.5)(typescript@5.8.3)
       '@remixicon/vue':
         specifier: ^4.6.0
         version: 4.6.0(vue@3.5.13(typescript@5.8.3))
@@ -131,7 +131,7 @@ importers:
         version: 1.0.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(vue@3.5.13(typescript@5.8.3))
       nuxt:
         specifier: ^3.16.0
-        version: 3.16.1(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
+        version: 3.16.1(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1)
       tailwind-merge:
         specifier: ^3.2.0
         version: 3.2.0
@@ -5189,30 +5189,30 @@ packages:
   perfect-debounce@1.0.0:
     resolution: {integrity: sha512-xCy9V055GLEqoFaHoC1SoLIaLmWctgCUaBaWxDZ7/Zx4CTyX7cJQLJOok/orfjZAh9kEYpjJa4d0KcJmCbctZA==}
 
-  pg-cloudflare@1.1.1:
-    resolution: {integrity: sha512-xWPagP/4B6BgFO+EKz3JONXv3YDgvkbVrGw2mTo3D6tVDQRh1e7cqVGvyR3BE+eQgAvx1XhW/iEASj4/jCWl3Q==}
+  pg-cloudflare@1.2.5:
+    resolution: {integrity: sha512-OOX22Vt0vOSRrdoUPKJ8Wi2OpE/o/h9T8X1s4qSkCedbNah9ei2W2765be8iMVxQUsvgT7zIAT2eIa9fs5+vtg==}
 
-  pg-connection-string@2.7.0:
-    resolution: {integrity: sha512-PI2W9mv53rXJQEOb8xNR8lH7Hr+EKa6oJa38zsK0S/ky2er16ios1wLKhZyxzD7jUReiWokc9WK5nxSnC7W1TA==}
+  pg-connection-string@2.8.5:
+    resolution: {integrity: sha512-Ni8FuZ8yAF+sWZzojvtLE2b03cqjO5jNULcHFfM9ZZ0/JXrgom5pBREbtnAw7oxsxJqHw9Nz/XWORUEL3/IFow==}
 
   pg-int8@1.0.1:
     resolution: {integrity: sha512-WCtabS6t3c8SkpDBUlb1kjOs7l66xsGdKpIPZsg4wR+B3+u9UAum2odSsF9tnvxg80h4ZxLWMy4pRjOsFIqQpw==}
     engines: {node: '>=4.0.0'}
 
-  pg-pool@3.8.0:
-    resolution: {integrity: sha512-VBw3jiVm6ZOdLBTIcXLNdSotb6Iy3uOCwDGFAksZCXmi10nyRvnP2v3jl4d+IsLYRyXf6o9hIm/ZtUzlByNUdw==}
+  pg-pool@3.9.6:
+    resolution: {integrity: sha512-rFen0G7adh1YmgvrmE5IPIqbb+IgEzENUm+tzm6MLLDSlPRoZVhzU1WdML9PV2W5GOdRA9qBKURlbt1OsXOsPw==}
     peerDependencies:
       pg: '>=8.0'
 
-  pg-protocol@1.8.0:
-    resolution: {integrity: sha512-jvuYlEkL03NRvOoyoRktBK7+qU5kOvlAwvmrH8sr3wbLrOdVWsRxQfz8mMy9sZFsqJ1hEWNfdWKI4SAmoL+j7g==}
+  pg-protocol@1.9.5:
+    resolution: {integrity: sha512-DYTWtWpfd5FOro3UnAfwvhD8jh59r2ig8bPtc9H8Ds7MscE/9NYruUQWFAOuraRl29jwcT2kyMFQ3MxeaVjUhg==}
 
   pg-types@2.2.0:
     resolution: {integrity: sha512-qTAAlrEsl8s4OiEQY69wDvcMIdQN6wdz5ojQiOy6YRMuynxenON0O5oCpJI6lshc6scgAY8qvJ2On/p+CXY0GA==}
     engines: {node: '>=4'}
 
-  pg@8.14.1:
-    resolution: {integrity: sha512-0TdbqfjwIun9Fm/r89oB7RFQ0bLgduAhiIqIXOsyKoiC/L54DbuAAzIEN/9Op0f1Po9X7iCPXGoa/Ah+2aI8Xw==}
+  pg@8.15.6:
+    resolution: {integrity: sha512-yvao7YI3GdmmrslNVsZgx9PfntfWrnXwtR+K/DjI0I/sTKif4Z623um+sjVZ1hk5670B+ODjvHDAckKdjmPTsg==}
     engines: {node: '>= 8.0.0'}
     peerDependencies:
       pg-native: '>=3.0.1'
@@ -6237,9 +6237,6 @@ packages:
     resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
     peerDependencies:
       tailwindcss: '>=3.0.0 || insiders'
-
-  tailwindcss@4.1.3:
-    resolution: {integrity: sha512-2Q+rw9vy1WFXu5cIxlvsabCwhU2qUwodGq03ODhLJ0jW4ek5BUtoCsnLB0qG+m8AHgEsSJcJGDSDe06FXlP74g==}
 
   tailwindcss@4.1.5:
     resolution: {integrity: sha512-nYtSPfWGDiWgCkwQG/m+aX83XCwf62sBgg3bIlNiiOcggnS1x3uVRDAuyelBFL+vJdOPPCGElxv9DjHJjRHiVA==}
@@ -7830,7 +7827,7 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  '@nuxt/content@3.5.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(magicast@0.3.5)(typescript@5.8.3)':
+  '@nuxt/content@3.5.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(magicast@0.3.5)(typescript@5.8.3)':
     dependencies:
       '@nuxt/kit': 3.17.0(magicast@0.3.5)
       '@nuxtjs/mdc': 0.17.0(magicast@0.3.5)
@@ -7841,7 +7838,7 @@ snapshots:
       c12: 3.0.3(magicast@0.3.5)
       chokidar: 4.0.3
       consola: 3.4.2
-      db0: 0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))
+      db0: 0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))
       defu: 6.1.4
       destr: 2.0.5
       fast-glob: 3.3.3
@@ -10266,15 +10263,15 @@ snapshots:
       es-errors: 1.3.0
       is-data-view: 1.0.2
 
-  db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)):
+  db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)):
     optionalDependencies:
       better-sqlite3: 11.9.1
-      drizzle-orm: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)
+      drizzle-orm: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)
 
-  db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)):
+  db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)):
     optionalDependencies:
       better-sqlite3: 11.9.1
-      drizzle-orm: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)
+      drizzle-orm: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)
 
   de-indent@1.0.2: {}
 
@@ -10414,17 +10411,17 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5):
+  drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5):
     optionalDependencies:
       better-sqlite3: 11.9.1
       gel: 2.0.2
       kysely: 0.27.6
-      pg: 8.14.1
+      pg: 8.15.6
       postgres: 3.4.5
 
-  drizzle-zod@0.7.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(zod@3.24.2):
+  drizzle-zod@0.7.1(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(zod@3.24.2):
     dependencies:
-      drizzle-orm: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)
+      drizzle-orm: 0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)
       zod: 3.24.2
 
   dunder-proto@1.0.1:
@@ -12602,7 +12599,7 @@ snapshots:
 
   natural-compare@1.4.0: {}
 
-  nitropack@2.11.7(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
+  nitropack@2.11.7(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@netlify/functions': 3.0.4
@@ -12624,7 +12621,7 @@ snapshots:
       cookie-es: 2.0.0
       croner: 9.0.0
       crossws: 0.3.4
-      db0: 0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))
+      db0: 0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))
       defu: 6.1.4
       destr: 2.0.5
       dot-prop: 9.0.0
@@ -12671,7 +12668,7 @@ snapshots:
       unenv: 2.0.0-rc.15
       unimport: 4.1.2
       unplugin-utils: 0.2.4
-      unstorage: 1.15.0(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(ioredis@5.6.0)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
+      unstorage: 1.15.0(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(ioredis@5.6.0)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
       untyped: 2.0.0
       unwasm: 0.3.9
       youch: 4.1.0-beta.6
@@ -12704,7 +12701,7 @@ snapshots:
       - typescript
       - uploadthing
 
-  nitropack@2.11.9(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
+  nitropack@2.11.9(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.4.0
       '@netlify/functions': 3.0.4
@@ -12726,7 +12723,7 @@ snapshots:
       cookie-es: 2.0.0
       croner: 9.0.0
       crossws: 0.3.4
-      db0: 0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))
+      db0: 0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))
       defu: 6.1.4
       destr: 2.0.5
       dot-prop: 9.0.0
@@ -12772,7 +12769,7 @@ snapshots:
       unenv: 2.0.0-rc.15
       unimport: 5.0.0
       unplugin-utils: 0.2.4
-      unstorage: 1.15.0(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(ioredis@5.6.1)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
+      unstorage: 1.15.0(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(ioredis@5.6.1)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
       untyped: 2.0.0
       unwasm: 0.3.9
       youch: 4.1.0-beta.7
@@ -12872,7 +12869,7 @@ snapshots:
     transitivePeerDependencies:
       - magicast
 
-  nuxt@3.16.1(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
+  nuxt@3.16.1(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.0)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.37.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.2(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
     dependencies:
       '@nuxt/cli': 3.23.1(magicast@0.3.5)
       '@nuxt/devalue': 2.0.2
@@ -12909,7 +12906,7 @@ snapshots:
       mlly: 1.7.4
       mocked-exports: 0.1.1
       nanotar: 0.2.0
-      nitropack: 2.11.7(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
+      nitropack: 2.11.7(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
       nypm: 0.6.0
       ofetch: 1.4.1
       ohash: 2.0.11
@@ -12931,7 +12928,7 @@ snapshots:
       unimport: 4.1.2
       unplugin: 2.2.2
       unplugin-vue-router: 0.12.0(vue-router@4.5.0(vue@3.5.13(typescript@5.8.3)))(vue@3.5.13(typescript@5.8.3))
-      unstorage: 1.15.0(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(ioredis@5.6.0)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
+      unstorage: 1.15.0(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(ioredis@5.6.0)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
       untyped: 2.0.0
       vue: 3.5.13(typescript@5.8.3)
       vue-bundle-renderer: 2.1.1
@@ -12993,7 +12990,7 @@ snapshots:
       - xml2js
       - yaml
 
-  nuxt@3.16.2(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.1)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.39.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
+  nuxt@3.16.2(@parcel/watcher@2.5.1)(@types/node@22.14.0)(better-sqlite3@11.9.1)(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(eslint@8.57.1)(ioredis@5.6.1)(lightningcss@1.29.2)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.39.0)(sass-embedded@1.86.3)(terser@5.39.0)(typescript@5.8.3)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))(vite@6.2.6(@types/node@22.14.0)(jiti@2.4.2)(lightningcss@1.29.2)(sass-embedded@1.86.3)(terser@5.39.0)(yaml@2.7.1))(yaml@2.7.1):
     dependencies:
       '@nuxt/cli': 3.24.1(magicast@0.3.5)
       '@nuxt/devalue': 2.0.2
@@ -13030,7 +13027,7 @@ snapshots:
       mlly: 1.7.4
       mocked-exports: 0.1.1
       nanotar: 0.2.0
-      nitropack: 2.11.9(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
+      nitropack: 2.11.9(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
       nypm: 0.6.0
       ofetch: 1.4.1
       ohash: 2.0.11
@@ -13052,7 +13049,7 @@ snapshots:
       unimport: 4.2.0
       unplugin: 2.3.1
       unplugin-vue-router: 0.12.0(vue-router@4.5.0(vue@3.5.13(typescript@5.8.3)))(vue@3.5.13(typescript@5.8.3))
-      unstorage: 1.15.0(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(ioredis@5.6.1)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
+      unstorage: 1.15.0(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(ioredis@5.6.1)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5))
       untyped: 2.0.0
       vue: 3.5.13(typescript@5.8.3)
       vue-bundle-renderer: 2.1.1
@@ -13345,18 +13342,18 @@ snapshots:
 
   perfect-debounce@1.0.0: {}
 
-  pg-cloudflare@1.1.1:
+  pg-cloudflare@1.2.5:
     optional: true
 
-  pg-connection-string@2.7.0: {}
+  pg-connection-string@2.8.5: {}
 
   pg-int8@1.0.1: {}
 
-  pg-pool@3.8.0(pg@8.14.1):
+  pg-pool@3.9.6(pg@8.15.6):
     dependencies:
-      pg: 8.14.1
+      pg: 8.15.6
 
-  pg-protocol@1.8.0: {}
+  pg-protocol@1.9.5: {}
 
   pg-types@2.2.0:
     dependencies:
@@ -13366,15 +13363,15 @@ snapshots:
       postgres-date: 1.0.7
       postgres-interval: 1.2.0
 
-  pg@8.14.1:
+  pg@8.15.6:
     dependencies:
-      pg-connection-string: 2.7.0
-      pg-pool: 3.8.0(pg@8.14.1)
-      pg-protocol: 1.8.0
+      pg-connection-string: 2.8.5
+      pg-pool: 3.9.6(pg@8.15.6)
+      pg-protocol: 1.9.5
       pg-types: 2.2.0
       pgpass: 1.0.5
     optionalDependencies:
-      pg-cloudflare: 1.1.1
+      pg-cloudflare: 1.2.5
 
   pgpass@1.0.5:
     dependencies:
@@ -14602,8 +14599,6 @@ snapshots:
     dependencies:
       tailwindcss: 4.1.5
 
-  tailwindcss@4.1.3: {}
-
   tailwindcss@4.1.5: {}
 
   tapable@2.2.1: {}
@@ -14982,7 +14977,7 @@ snapshots:
       picomatch: 4.0.2
       webpack-virtual-modules: 0.6.2
 
-  unstorage@1.15.0(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(ioredis@5.6.1)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
+  unstorage@1.15.0(db0@0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(ioredis@5.6.1)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
     dependencies:
       anymatch: 3.1.3
       chokidar: 4.0.3
@@ -14993,11 +14988,11 @@ snapshots:
       ofetch: 1.4.1
       ufo: 1.6.1
     optionalDependencies:
-      db0: 0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))
+      db0: 0.3.1(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))
       ioredis: 5.6.1
       uploadthing: 7.6.0(h3@1.15.2)(tailwindcss@4.1.5)
 
-  unstorage@1.15.0(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5)))(ioredis@5.6.0)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
+  unstorage@1.15.0(db0@0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5)))(ioredis@5.6.0)(uploadthing@7.6.0(h3@1.15.2)(tailwindcss@4.1.5)):
     dependencies:
       anymatch: 3.1.3
       chokidar: 4.0.3
@@ -15008,7 +15003,7 @@ snapshots:
       ofetch: 1.4.1
       ufo: 1.6.1
     optionalDependencies:
-      db0: 0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.14.1)(postgres@3.4.5))
+      db0: 0.3.2(better-sqlite3@11.9.1)(drizzle-orm@0.41.0(better-sqlite3@11.9.1)(gel@2.0.2)(kysely@0.27.6)(pg@8.15.6)(postgres@3.4.5))
       ioredis: 5.6.0
       uploadthing: 7.6.0(h3@1.15.2)(tailwindcss@4.1.5)
 
