@@ -1,8 +1,8 @@
 <template>
   <div
-    class="w-full h-[calc(100%-104px)] absolute flex justify-center items-center"
+    class="w-full min-h-[calc(100vh-104px)] flex flex-col justify-center items-center relative mb-32"
   >
-    <div class="container h-full flex justify-center items-center">
+    <div class="container flex justify-center items-center">
       <h1
         class="text-6xl max-sm:text-4xl font-bold uppercase text-center text-[#EE6F53] font-[]"
       >
@@ -35,6 +35,16 @@
         <br />
         //
       </h1>
+    </div>
+    <div class="absolute bottom-8 text-[#729171] text-sm">
+      Secured by
+      <a href="https://eigenlayer.xyz" target="blank">
+        <img
+          class="h-5 w-fit inline"
+          alt="EigenLayer"
+          src="@/assets/img/eigenlayer.svg"
+        />
+      </a>
     </div>
   </div>
 </template>

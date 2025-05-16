@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full px-5">
+  <div class="w-full px-5 bg-[#001917] z-20">
     <ul class="uppercase text-[#EE6F53] font-semibold">
       <li>
         <nuxt-link to="https://github.com/0xZeroLabs/s3n">gitHub</nuxt-link>
