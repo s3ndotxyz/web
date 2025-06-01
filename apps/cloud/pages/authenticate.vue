@@ -171,7 +171,7 @@ const goback = () => {
             to="https://www.s3n.xyz"
           >
             <p class="mr-2">Brought to you by</p>
-            <img src="@/assets/img/s3n.svg" class="h-[28px] w-fit" alt="S3N" />
+            <img src="@/assets/img/s3n.svg" class="h-[24px] w-fit" alt="S3N" />
           </nuxt-link>
         </div>
       </CardContent>
