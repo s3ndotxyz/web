@@ -65,6 +65,22 @@
   src: url("./fonts/Sora-VariableFont_wght.ttf");
 }
 
+@theme inline {
+  --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.23);
+  --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.23);
+  --shadow-sm:
+    0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 1px 2px -1px hsl(0 0% 0% / 0.25);
+  --shadow:
+    0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 1px 2px -1px hsl(0 0% 0% / 0.25);
+  --shadow-md:
+    0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 2px 4px -1px hsl(0 0% 0% / 0.25);
+  --shadow-lg:
+    0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 4px 6px -1px hsl(0 0% 0% / 0.25);
+  --shadow-xl:
+    0px 1px 3px 0px hsl(0 0% 0% / 0.25), 0px 8px 10px -1px hsl(0 0% 0% / 0.25);
+  --shadow-2xl: 0px 1px 3px 0px hsl(0 0% 0% / 1.13);
+}
+
 @layer base {
   :root {
     --background: 174 97% 5%; /* #001917 */
@@ -95,5 +111,8 @@
   .negative::-moz-selection,
   .negative::selection {
     @apply text-[#F96D4E] bg-[#001311];
+    * {
+      @apply text-[#F96D4E] bg-[#001311];
+    }
   }
 }

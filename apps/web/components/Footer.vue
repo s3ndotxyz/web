@@ -10,7 +10,7 @@
     </ul>
     <div class="w-full flex justify-between items-center py-4">
       <div class="flex items-center text-[#EE6F53] font-bold">
-        All rights reserved © {{ new Date().getFullYear() }}.
+        ZERO Labs Ltd © {{ new Date().getFullYear() }}.
       </div>
       <router-link to="/" class="h-[40px] btn">
         <img src="@/assets/img/s3n.svg" class="w-fit h-7" />

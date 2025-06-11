@@ -25,7 +25,7 @@
             "
             class="inline-block"
           >
-            <nuxt-link class="h-[36px] bg-[#EE6F53] mx-1 btn" :to="i.url"
+            <nuxt-link class="h-[36px] bg-[#EE6F53] mx-1 btn shadow" :to="i.url"
               >{{ i.name }}
             </nuxt-link>
           </Motion>

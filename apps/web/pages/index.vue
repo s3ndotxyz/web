@@ -2,8 +2,8 @@
   <div class="relative">
     <!-- <div class="flex flex-col h-full snap"> -->
     <Hero />
+    <!-- <Partners /> -->
     <!-- <About /> -->
-    <!-- </div> -->
     <a
       href="https://cal.com/ewanretor-giwa-okugbe-u0xylh"
       class="fixed bottom-8 right-8 z-10"
@@ -29,6 +29,7 @@ const { y, directions } = useScroll(window);
 watch([y, directions], () => {
   const path = document.querySelector("#track-animated");
   const footerHeight = 168;
+  // const footerHeight = 0;
   const scrollHeight =
     document.documentElement.scrollHeight - window.innerHeight - footerHeight;
   const progress = Math.min(1, Math.max(0, y.value / scrollHeight));

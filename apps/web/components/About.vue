@@ -1,12 +1,27 @@
 <template>
   <div
-    class="w-full min-h-[calc(100vh-204px)] py-8 md:py-[0px] flex flex-col justify-center items-center"
+    class="w-full px-4 md:px-16 py-9 md:py-11 flex flex-col justify-center items-center"
   >
-    <div class="container max-w-5xl px-6">
-      <h2 class="text-md text-center font-bold text-[#EE6F53] mb-4">
-        Serverless that is
-      </h2>
-      <div class="grid md:grid-cols-2 gap-6 mt-12">
+    <div class="flex flex-col md:flex-row justify-between gap-16">
+      <div class="flex flex-col items-start gap-3">
+        <h2 class="flex flex-col w-fit uppercase">
+          <span class="text-[#F96D4E] flex justify-between">
+            <span class="text-3xl md:text-4xl">Global</span>
+          </span>
+          <span class="text-4xl md:text-7xl text-[#F96D4E]">Compute</span>
+        </h2>
+        <p class="text-[1.125rem] text-left text-[#fff] mb-4">
+          S3N is the go-to platform for deploying and managing secure
+          applications on the edge, secured by TEEs.
+        </p>
+        <nuxt-link
+          class="h-[36px] bg-[#EE6F53] mx-1 btn shadow hidden md:flex"
+          to="https://t.me/lordewan"
+        >
+          integrate us
+        </nuxt-link>
+      </div>
+      <div class="grid md:grid-cols-2 gap-x-11 gap-y-10">
         <Motion
           :initial="{ opacity: 0, y: 20 }"
           :animate="{ opacity: 1, y: 0 }"
@@ -16,10 +31,11 @@
             <template #icon>
               <RiDoorLockLine class="w-6 h-6 text-[#F96D4E]" />
             </template>
-            <template #title>Secure</template>
+            <template #title>Confidential</template>
             <template #description>
-              Hardware-level security guarantees through Trusted Execution
-              Environments (TEEs), ensuring your code and data remain protected.
+              The core runtime orchestrates WASM functions within Intel SGX,
+              ensuring no participant of the network has access to code, data
+              and runtime lifecylces.
             </template>
           </Feature>
         </Motion>
@@ -33,10 +49,11 @@
             <template #icon>
               <RiFileShield2Line class="w-6 h-6 text-[#F96D4E]" />
             </template>
-            <template #title>Verifiable</template>
+            <template #title>Modular</template>
             <template #description>
-              Cryptographic proof of correct execution, enabling transparent and
-              trustless computation verification.
+              Components of the network are given specialisation of functions to
+              reduce the attack surface, isolating compromised participants in
+              the case of a zero day incident.
             </template>
           </Feature>
         </Motion>
@@ -50,10 +67,11 @@
             <template #icon>
               <RiEarthLine class="w-6 h-6 text-[#F96D4E]" />
             </template>
-            <template #title>Scalable</template>
+            <template #title>Verifiable</template>
             <template #description>
-              Elastically scale your applications from zero to global scale with
-              automatic resource provisioning.
+              Nodes are reproducible and we've shifted some element of trust
+              on-chain, where anyone can attest to the integrity of nodes and
+              their participation in the network.
             </template>
           </Feature>
         </Motion>
@@ -68,9 +86,9 @@
               <RiFlashlightLine class="w-6 h-6 text-[#F96D4E]" />
             </template>
             <template #title>Performant</template>
-            <template #description>
-              Optimized runtime environment ensuring low latency and high
-              throughput for your applications.
+            <template #description
+              >S3N is designed to have low latency and high availability, to
+              help you scale with minimal trade offs on security and compliance.
             </template>
           </Feature>
         </Motion>

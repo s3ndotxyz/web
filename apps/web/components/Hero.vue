@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-full min-h-[calc(100vh-104px)] flex flex-col justify-center items-center relative mb-32"
+    class="w-full min-h-[calc(100vh-52px)] flex flex-col justify-center items-center relative mb-[52px]"
   >
     <div class="container flex justify-center items-center">
       <h1
@@ -11,7 +11,6 @@
           style="vertical-align: bottom"
         >
           <div class="relative h-fit">
-            Hardware-secured compute at
             <span class="negative">
               <Motion
                 v-for="(word, index) in currentTextArray"
@@ -30,6 +29,7 @@
                 {{ word }}
               </Motion>
             </span>
+            serverless compute
           </div>
         </div>
         <br />
@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-const words = ref(["scale", "turbo speed", "full throttle"]);
+const words = ref(["secure", "scalable", "stateful"]);
 const currentWordIndex = ref(0);
 
 const currentTextArray = computed(() => {
