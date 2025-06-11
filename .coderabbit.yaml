@@ -48,7 +48,7 @@ reviews:
   request_changes_workflow: true
 chat:
   auto_reply: true
-  create_issues: true
+create_issues: true
 code_generation:
   docstrings:
     language: en-GB
