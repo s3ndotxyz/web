@@ -50,7 +50,7 @@
 </template>
 
 <script setup>
-const words = ref(["secure", "scalable", "stateful"]);
+const words = ref(["confidential", "verifiable", "stateful"]);
 const currentWordIndex = ref(0);
 
 const currentTextArray = computed(() => {
