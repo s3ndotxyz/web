@@ -10,9 +10,16 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
     "@nuxt/content": "^3.5.1",
+    "@radix-icons/vue": "^1.0.0",
     "@remixicon/vue": "^4.6.0",
     "@tailwindcss/vite": "^4.1.5",
+    "better-sqlite3": "^12.1.1",
     "motion-v": "^1.0.1",
     "nuxt": "^3.16.0",
     "tailwind-merge": "^3.2.0",
