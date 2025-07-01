@@ -13,7 +13,7 @@
     "@formkit/auto-animate": "^0.8.2",
     "@radix-icons/vue": "^1.0.0",
     "@remixicon/vue": "^4.6.0",
-    "@tailwindcss/vite": "^4.1.5",
+    "@tailwindcss/vite": "^4.1.11",
     "@vee-validate/zod": "^4.15.1",
     "@vueuse/core": "^13.1.0",
     "better-auth": "^1.2.5",
