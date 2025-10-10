@@ -21,7 +21,7 @@
 
       <div
         v-if="posts.length > 0"
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 font-[Actay]"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
         <Motion
           as="div"
@@ -40,7 +40,7 @@
       </div>
       <div
         v-else
-        class="text-center py-16 px-8 bg-[#00231f]/50 rounded-xl border border-[#EE6F53]/20 font-[Actay]"
+        class="text-center py-16 px-8 bg-[#00231f]/50 rounded-xl border border-[#EE6F53]/20"
       >
         <div class="text-[#EE6F53] text-4xl mb-4">✦</div>
         <p class="text-white text-lg mb-2">No blog posts found</p>

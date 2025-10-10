@@ -308,13 +308,12 @@ useSeoMeta({
 }
 
 .tag {
-  @apply !bg-[#EE6F53] !text-[#001917] !no-underline;
+  @apply !bg-[#EE6F53] !text-[#001917] font-[Actay] !no-underline;
 }
 
 .blog-content-wrapper {
   font-size: 1.125rem;
   line-height: 1.75;
-  @apply font-[Actay];
 }
 
 /* Image styling */
@@ -385,6 +384,6 @@ useSeoMeta({
 
 article,
 .meta {
-  @apply !max-w-3xl !font-[Actay];
+  @apply !max-w-3xl;
 }
 </style>

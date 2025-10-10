@@ -1,17 +1,15 @@
 <template>
-  <div class="relative">
+  <div class="relative w-full overflow-clip z-20">
     <!-- <div class="flex flex-col h-full snap"> -->
     <Hero />
     <!-- <Partners /> -->
-    <!-- <About /> -->
-    <a
-      href="https://cal.com/ewanretor-giwa-okugbe-u0xylh"
-      class="fixed bottom-8 right-8 z-10"
-    >
+    <About />
+    <!-- <Pricing /> -->
+    <a href="https://t.me/lordewan" class="fixed bottom-8 right-8 z-10">
       <div class="relative w-32 h-32 md:w-48 md:h-48">
         <Circuit class="w-full h-full" />
         <span
-          class="absolute inset-0 flex items-center justify-end text-[#729171] text-xs md:pr-4 md:text-sm font-medium"
+          class="absolute inset-0 flex items-center justify-end text-[#729171] text-xs md:pr-4 md:text-sm font-medium font-[Actay]"
         >
           Talk to us
         </span>
@@ -47,13 +45,13 @@ watch([y, directions], () => {
 });
 
 useSeoMeta({
-  title: "S3N | TEE as a Service network",
-  ogTitle: "S3N | TEE as a Service network",
-  description: "One-click TEE application deployment.",
-  ogDescription: "One-click TEE application deployment.",
+  title: "S3N | Edge Compute For Critical Workloads",
+  ogTitle: "S3N | Edge Compute For Critical Workloads",
+  description: "Build mission critical applications with zero trade-offs.",
+  ogDescription: "Build mission critical applications with zero trade-offs.",
   ogImage: "/hero.png",
   twitterCard: "summary_large_image",
-  twitterSite: "@s3ndotxyz",
+  twitterSite: "@slipsys_",
 });
 </script>
 
