@@ -122,9 +122,3 @@
 import { Motion } from "motion-v";
 </script>
 
-<!-- <style scoped>
-.resilient {
-  grid-column-end: span 2;
-  grid-row-end: span 1;
-}
-</style> -->
