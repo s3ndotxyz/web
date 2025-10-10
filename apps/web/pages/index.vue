@@ -5,7 +5,7 @@
     <!-- <Partners /> -->
     <About />
     <!-- <Pricing /> -->
-    <a href="https://t.me/lordewan" class="fixed bottom-8 right-8 z-10">
+    <a href="mailto:ewan@s3n.xyz" class="fixed bottom-8 right-8 z-10">
       <div class="relative w-32 h-32 md:w-48 md:h-48">
         <Circuit class="w-full h-full" />
         <span
