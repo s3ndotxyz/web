@@ -25,7 +25,7 @@ import { useScroll } from "@vueuse/core";
 const { y, directions } = useScroll(window);
 
 watch([y, directions], () => {
-  const path = document.querySelector("#track-animated");
+  const path = document.querySelector("#track-animated") as SVGPathElement;
   const footerHeight = 168;
   // const footerHeight = 0;
   const scrollHeight =
