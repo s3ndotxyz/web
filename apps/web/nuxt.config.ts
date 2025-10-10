@@ -5,7 +5,10 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   modules: ["motion-v/nuxt", "@nuxtjs/color-mode", "@nuxt/content"],
-  css: ["~/assets/css/main.css"],
+  css: [
+    "~/assets/css/main.css",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
   colorMode: {
     preference: "system",
     globalName: "__NUXT_COLOR_MODE__",

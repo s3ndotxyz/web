@@ -65,6 +65,11 @@
   src: url("./fonts/Sora-VariableFont_wght.ttf");
 }
 
+@font-face {
+  font-family: "Intel";
+  src: url("./fonts/IntelOneMono-VariableFont_wght.ttf");
+}
+
 @theme inline {
   --shadow-2xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.23);
   --shadow-xs: 0px 1px 3px 0px hsl(0 0% 0% / 0.23);
@@ -89,14 +94,59 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-[hsl(var(--background))] py-4 font-[Actay];
+    @apply bg-[hsl(var(--background))] font-[Intel];
   }
+
+  .btn,
+  .btn2,
+  .btn-p {
+    @apply hover:cursor-crosshair font-[Actay];
+  }
+
   .btn,
   input {
-    @apply relative px-4 rounded-xl flex justify-center items-center text-[#001917] font-semibold uppercase text-sm text-center;
+    @apply relative bg-[#1c1c1c] px-2 rounded-xl flex justify-center items-center;
     * {
-      @apply text-[#001917] text-sm text-center z-10 relative;
+      @apply text-white text-sm z-10 relative;
     }
+  }
+  .btn::before {
+    content: "";
+    @apply bg-[#1c1c1c]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  .btn:after {
+    content: "";
+    @apply bg-[#1c1c1c]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+  }
+
+  .btn2 {
+    @apply relative bg-[#e9e9e9] px-2 rounded-xl flex justify-center items-center;
+    * {
+      @apply text-[#001917] text-sm z-10 relative;
+    }
+  }
+  .btn2::before {
+    content: "";
+    @apply bg-[#e9e9e9]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  .btn2:after {
+    content: "";
+    @apply bg-[#e9e9e9]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
+  }
+
+  .btn-p {
+    @apply relative bg-[#e9e9e9] px-2 rounded-xl flex justify-center items-center;
+    * {
+      @apply text-[#001917] text-sm z-10 relative;
+    }
+  }
+  .btn-p::before {
+    content: "";
+    @apply bg-[#EE6F53]/80 absolute top-[8px] left-[-2px] w-[calc(100%+4px)] h-[calc(100%-16px)];
+  }
+  .btn-p:after {
+    content: "";
+    @apply bg-[#EE6F53]/80 absolute left-[8px] top-[-2px] h-[calc(100%+4px)] w-[calc(100%-16px)];
   }
 
   ::-moz-selection,
@@ -107,12 +157,21 @@
   .negative {
     @apply text-[#001917] bg-[#F96D4E];
   }
+  .negative2 {
+    @apply text-[#F96D4E];
+  }
 
   .negative::-moz-selection,
   .negative::selection {
     @apply text-[#F96D4E] bg-[#001311];
     * {
       @apply text-[#F96D4E] bg-[#001311];
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-[Actay] font-bold;
+    * {
+      @apply font-[Actay] font-bold;
     }
   }
 }

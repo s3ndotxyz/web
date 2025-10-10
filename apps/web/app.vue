@@ -68,7 +68,8 @@ onMounted(() => {
 #custom-cursor {
   width: 40px;
   height: 40px;
-  border: 2px solid #ee6f53;
+  border: 2px solid #ee6f5388;
+  background: #ee6f5344;
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
@@ -90,8 +91,5 @@ onMounted(() => {
   body {
     cursor: auto;
   }
-}
-button {
-  /* @apply cursor-crosshair !important; */
 }
 </style>

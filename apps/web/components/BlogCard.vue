@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[#00231f] rounded-xl overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(238,111,83,0.2)] border border-transparent hover:border-[#EE6F53]/20"
+    class="bg-[#00231f] rounded-2xl overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-[0_0_15px_rgba(238,111,83,0.2)] border border-transparent hover:border-[#EE6F53]/20"
   >
     <nuxt-link :to="post.path" class="block h-full group">
       <div class="relative h-48 overflow-hidden">
@@ -14,7 +14,7 @@
         ></div>
         <div
           v-if="post.tags && post.tags.length"
-          class="absolute top-3 right-3 flex gap-1 flex-wrap justify-end max-w-[60%]"
+          class="absolute top-3 right-3 flex gap-1 flex-wrap justify-end max-w-[60%] font-[Actay]"
         >
           <span
             v-for="tag in post.tags.slice(0, 2)"
