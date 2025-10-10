@@ -58,7 +58,6 @@
               rx="1"
               class="transform origin-center translate-x-2 transition duration-200 ease-out -rotate-[60deg]"
               :class="{
-                // '!-rotate-[45deg]': menuOpen,
                 '!translate-x-0': menuOpen,
               }"
             />
