@@ -13,8 +13,10 @@
 
 <script setup lang="ts">
 let cursor: HTMLElement | null = null;
+console.log("here");
 
 onMounted(() => {
+  console.log("here");
   cursor = document.getElementById("custom-cursor");
 
   const moveCursor = (e: MouseEvent) => {

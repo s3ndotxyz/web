@@ -239,12 +239,14 @@ const otherPosts = computed(() => {
 const parsedTags = computed(() => {
   if (!post.value || !post.value.tags) return [];
 
+  const tags = post.value.tags as string[] | string;
+
   // Handle different formats of tags
-  if (Array.isArray(post.value.tags)) {
-    return post.value.tags;
-  } else if (typeof post.value.tags === "string") {
+  if (Array.isArray(tags)) {
+    return tags;
+  } else if (typeof tags === "string") {
     // If it's a comma-separated string
-    return post.value?.tags
+    return tags
       .split(",")
       .map((tag: string) => tag.trim())
       .filter((tag: string) => Boolean(tag));

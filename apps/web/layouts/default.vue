@@ -4,7 +4,7 @@
       v-if="isLoading"
       class="fixed inset-0 z-50 flex items-center justify-center"
     >
-      <TrackLoader />
+      <div class="text-[#EE6F53] text-xl font-bold">Loading...</div>
     </div>
     <div
       :class="{

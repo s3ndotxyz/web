@@ -57,18 +57,18 @@
 </template>
 
 <script setup>
-const words = ref(["confidential", "verifiable", "stateful"]);
-const currentWordIndex = ref(0);
+// const words = ref(["confidential", "verifiable", "stateful"]);
+// const currentWordIndex = ref(0);
 
-const currentTextArray = computed(() => {
-  return words.value[currentWordIndex.value].split(" ");
-});
+// const currentTextArray = computed(() => {
+//   return words.value[currentWordIndex.value].split(" ");
+// });
 
-onMounted(() => {
-  setInterval(() => {
-    currentWordIndex.value = (currentWordIndex.value + 1) % words.value.length;
-  }, 4000);
-});
+// onMounted(() => {
+//   setInterval(() => {
+//     currentWordIndex.value = (currentWordIndex.value + 1) % words.value.length;
+//   }, 4000);
+// });
 </script>
 
 <style scoped>
