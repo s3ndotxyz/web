@@ -6,7 +6,7 @@ image: "/blog/intro-banner_.png"
 tags: [serverless, secure compute, confidential compute, TEE, wasm]
 ---
 
-We’ve been quiet for a long time — building, rethinking, and iterating on what secure compute should look like in an adverserial world.
+We’ve been quiet for a long time — building, rethinking, and iterating on what secure compute should look like in an adversarial world.
 
 Today, we’re introducing **Slipstream**, a **WMM (WASM Module Monitor)**, the first component of our serverless compute platform powered by trusted execution environments.
 
