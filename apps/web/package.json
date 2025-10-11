@@ -21,7 +21,11 @@
     "@tailwindcss/vite": "^4.1.14",
     "better-sqlite3": "^11.10.0",
     "motion-v": "^1.7.2",
+<<<<<<< HEAD
     "nuxt": "^3.19.3",
+=======
+    "nuxt": "^3.19.0",
+>>>>>>> 26db01b42fde7017493a262b1df0b2edbe7a8545
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.14",
     "tailwindcss-animate": "^1.0.7",
