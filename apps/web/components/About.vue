@@ -39,8 +39,8 @@
             <template #title>Co-ordinated</template>
             <template #description>
               Multiple workload instances can securely share and process data in
-              real-time. Built-in message queues and multi-party primitives
-              enable seamless distributed computing without compromising data
+              real-time. Built-in networking and multi-party primitives enable
+              seamless distributed computing without compromising data
               isolation.
             </template>
           </Feature>
@@ -62,9 +62,9 @@
             <template #title>Persistent</template>
             <template #description>
               We go beyond stateless functions with in-runtime key-value stores,
-              websocket connections, and scheduling to enable stateful
-              workloads. Your distributed instances can maintain shared state
-              and co-ordinate complex multistep processes.
+              socket connections, and scheduling to enable stateful workloads.
+              Your distributed instances can maintain shared state and
+              co-ordinate complex multistep processes.
             </template>
           </Feature>
         </Motion>
@@ -86,8 +86,9 @@
             <template #title>Resilient</template>
             <template #description>
               We only rely on TEE isolation for execution life-cycles,
-              decoupling key-management and sandboxing to ensure your data
-              remain protected even from privileged access or zero-day exploits.
+              decoupling key-management (via MPC) and sandboxing (via WASM) to
+              ensure your data remain protected even from privileged access or
+              zero-day exploits.
             </template>
           </Feature>
         </Motion>
@@ -121,4 +122,3 @@
 <script setup lang="ts">
 import { Motion } from "motion-v";
 </script>
-
