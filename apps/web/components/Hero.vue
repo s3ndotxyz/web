@@ -4,7 +4,7 @@
   >
     <header class="flex-1 relative h-full overflow-hidden">
       <div
-        class="flex flex-col items-center justify-center md:grid grid-cols-6 gap-32 relative px-[1.25rem] lg:px-[1.25rem] pt-24 h-full max-w-[1920px] mx-auto"
+        class="flex flex-col items-center justify-center md:grid grid-cols-6 gap-32 relative px-[1.25rem] lg:px-[1.25rem] pt-12 md:pt-24 h-full max-w-[1920px] mx-auto"
       >
         <div
           class="h-full col-[2/6] xl:col-[2/5] flex flex-col gap-8 justify-center z-10 pt-[6.25rem]"
