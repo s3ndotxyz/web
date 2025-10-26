@@ -64,10 +64,15 @@
 
               <div
                 v-if="post.date"
-                class="flex items-center text-lg text-[#EE6F53] font-medium mb-6"
+                class="flex items-center text-sm text-[#EE6F53] font-medium mb-6"
               >
-                <RiCalendarView class="mr-2" />
+                <font-awesome-icon
+                  icon="fa-solid fa-calendar-days"
+                  class="w-6 h-6 text-[#F96D4E] text-lg mr-2"
+                />
                 {{ formatDate(post.date) }}
+                -
+                {{ post.meta.authors }}
               </div>
 
               <!-- Featured image -->
@@ -111,7 +116,7 @@
                 </nuxt-link>
 
                 <!-- Social share buttons -->
-                <div class="flex items-center gap-3">
+                <div class="flex items-center gap-3 text-lg">
                   <span class="text-white text-sm">Share:</span>
                   <a
                     :href="`https://x.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(useRequestURL().href)}`"
@@ -119,7 +124,10 @@
                     rel="noopener noreferrer"
                     class="text-[#EE6F53] hover:text-white transition-colors"
                   >
-                    <RiTwitterXLine />
+                    <font-awesome-icon
+                      icon="fa-brands fa-x-twitter"
+                      class="w-6 h-6 text-[#F96D4E]"
+                    />
                   </a>
                   <a
                     :href="`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(useRequestURL().href)}`"
@@ -127,7 +135,10 @@
                     rel="noopener noreferrer"
                     class="text-[#EE6F53] hover:text-white transition-colors"
                   >
-                    <RiFacebookFill />
+                    <font-awesome-icon
+                      icon="fa-brands fa-facebook-f"
+                      class="w-6 h-6 text-[#F96D4E]"
+                    />
                   </a>
                   <a
                     :href="`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(useRequestURL().href)}&title=${encodeURIComponent(post.title)}`"
@@ -135,7 +146,10 @@
                     rel="noopener noreferrer"
                     class="text-[#EE6F53] hover:text-white transition-colors"
                   >
-                    <RiLinkedinFill />
+                    <font-awesome-icon
+                      icon="fa-brands fa-linkedin-in"
+                      class="w-6 h-6 text-[#F96D4E]"
+                    />
                   </a>
                 </div>
               </div>
